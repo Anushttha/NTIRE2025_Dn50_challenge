@@ -17,9 +17,9 @@ def select_model(args, device):
     model_id = args.model_id
     if model_id == 0:
         # SGN test
-        from models.team00_SGN import SGNDN3
+        from models.team24_DCNN import SGNDN3
         name, data_range = f"{model_id:02}_RFDN_baseline", 1.0
-        model_path = os.path.join('model_zoo', 'team00_sgn.ckpt')
+        model_path = os.path.join('model_zoo', 'team24_DCNN.pth')
         model = SGNDN3()
 
         state_dict = torch.load(model_path)["state_dict"]
